@@ -1,0 +1,103 @@
+@import 'variables';
+
+.img-carousel {
+  background-color: $secondary-font-color;
+  display: grid;
+  grid-template-columns: 33% 67%;
+
+  .next-img-btn {
+    grid-column: 1;
+    padding: 0;
+    border: none;
+    background-color: $image-btn-bg-color;
+    cursor: pointer;
+    font-size: $secondary-font-size-l;
+    font-weight: bold;
+    color: $primary-font-color;
+
+    &:hover {
+      background-color: $image-btn-hover-bg-color;
+    }
+  }
+
+  .carousel {
+    grid-column: 2;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    &:after {
+      content: 'flickity';
+      display: none;
+    }
+
+    .carousel-cell {
+      width: 50%;
+      position: absolute;
+      transition: transform 0.3s;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .img-carousel {
+    .next-img-btn {
+      span.material-icons {
+        font-size: 3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .img-carousel {
+    grid-template-rows: 33% 67%;
+    grid-template-columns: 100%;
+
+    .next-img-btn {
+      grid-column: 1;
+      grid-row: 1;
+      height: auto;
+
+      span.material-icons {
+        font-size: 3rem;
+      }
+    }
+
+    .carousel {
+      grid-column: 1;
+      grid-row: 2;
+      width: 100%;
+
+      &:after {
+        content: '';
+      }
+
+      .carousel-cell {
+        width: 100%;
+        height: auto;
+        position: static;
+      }
+
+      .extra-img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .img-carousel {
+    .next-img-btn {
+
+      span.material-icons {
+        font-size: 1.8rem;
+      }
+    }
+  }
+}

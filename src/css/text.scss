@@ -1,0 +1,48 @@
+@import 'variables';
+
+.text-section {
+  padding: 70px 100px 150px 100px;
+  background-color: $secondary-font-color;
+
+  h2 {
+    color: $h2-font-color;
+    font-weight: bold;
+    font-size: $h2-default-font-size;
+    padding-bottom: 20px;
+  }
+
+  .text-section-cols {
+    display: flex;
+    gap: 70px;
+
+    div > p {
+      font-weight: bolder;
+      color: hsl(0, 0%, 30%);
+      line-height: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .text-section-cols {
+    flex-direction: column;
+  }
+  .second-text-col {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .text-section {
+    padding: 40px 40px;
+
+    .text-section-cols {
+
+      div > p {
+        font-size: $paragraph-font-size-xs;
+        line-height: $paragraph-line-height-xs;
+      }
+    }
+  }
+}
+

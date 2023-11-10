@@ -1,0 +1,61 @@
+@import 'variables';
+
+.quote-carousel {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  background-color: $semi-dark-bg-color;
+  color: $quote-carousel-font-color;
+  font-weight: bold;
+  text-align: center;
+  font-size: $secondary-font-size-l;
+
+  .quote {
+    grid-column: 1;
+    padding: 10%;
+  }
+
+  .next-q-btn {
+    grid-column: 2;
+    border: none;
+    background-color: $quote-btn-bg-color;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $quote-btn-hover-bg-color;
+    }
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .quote-carousel {
+    font-size: $secondary-font-size-md;
+
+    .next-q-btn {
+      font-size: $secondary-font-size-md;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .quote-carousel {
+    font-size: $secondary-font-size-s;
+
+    .next-q-btn {
+      font-size: $secondary-font-size-s;
+
+      span.material-icons {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .quote-carousel {
+    font-size: $tertiary-font-size-xs;
+
+    span.material-icons {
+      font-size: 1rem;
+    }
+  }
+}

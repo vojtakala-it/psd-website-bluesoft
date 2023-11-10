@@ -1,0 +1,22 @@
+@import 'reset';
+
+@import 'navbar';
+@import 'header';
+@import 'quote-carousel.scss';
+@import 'img-carousel';
+@import 'text.scss';
+
+* { box-sizing: border-box; }
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.material-icons {
+    color: $h1-font-color;
+    font-weight: bold;
+}

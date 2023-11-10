@@ -1,0 +1,97 @@
+@import 'variables';
+
+.header {
+  background-color: $header-bg-color;
+  display: flex;
+  justify-content: center;
+
+    .header-section {
+      padding: 190px 70px 170px 20px;
+      display: inline-block;
+
+      h1 {
+        font-size: $primary-font-size-l;
+        font-weight: bold;
+        color: $h1-font-color;
+        letter-spacing: 1px;
+        line-height: 67px;
+      }
+
+      p {
+        font-size: $secondary-font-size-l;
+        font-weight: bold;
+        color: $secondary-font-color;
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        letter-spacing: 1px;
+      }
+
+      p > a {
+        text-decoration: none;
+        color: $primary-font-color;
+      }
+    }
+}
+
+@media screen and (max-width: 980px) {
+  .header {
+    .header-section {
+      padding: 180px 60px 160px 30px;
+
+      h1 {
+        font-size: $primary-font-size-md;
+        line-height: 60px;
+      }
+
+      p {
+        font-size: $secondary-font-size-md;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header {
+    .header-section {
+      padding: 130px 60px 110px 0;
+
+      h1 {
+        font-size: $primary-font-size-s;
+        line-height: 40px;
+      }
+
+      p {
+        padding-top: 20px;
+        font-size: $secondary-font-size-s;
+
+        span.material-icons {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .header {
+    .header-section {
+      padding: 55px 40px 55px 15px;
+
+      h1 {
+        font-size: $primary-font-size-xs;
+        line-height: 23px;
+      }
+
+      p {
+        padding-top: 12px;
+        font-size: $secondary-font-size-xs;
+
+        span.material-icons {
+          font-size: 0.7rem;
+        }
+      }
+    }
+  }
+}
