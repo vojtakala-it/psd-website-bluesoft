@@ -1,15 +1,7 @@
-# 🚀 Welcome to your new awesome project!
-
-This project has been created using **webpack-cli**, you can now run
+# 🚀 Welcome to PSD Website!
 
 ```
-npm run build
+npm i && npm start
 ```
 
-or
-
-```
-yarn build
-```
-
-to bundle your application
+to start it up
